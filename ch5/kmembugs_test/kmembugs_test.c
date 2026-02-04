@@ -36,6 +36,7 @@
 #include <linux/kernel.h>
 #include <linux/module.h>
 #include <linux/slab.h>
+#include <linux/kasan.h>
 #include <linux/vmalloc.h>
 #include <linux/mm.h>
 #include <linux/irq_work.h>
@@ -45,6 +46,7 @@
 MODULE_AUTHOR("Kaiwan N Billimoria");
 MODULE_DESCRIPTION("kmembugs_test: a few additional test cases for KASAN/UBSAN");
 MODULE_LICENSE("Dual MIT/GPL");
+MODULE_IMPORT_NS("EXPORTED_FOR_KUNIT_TESTING");
 MODULE_VERSION("0.1");
 
 #ifdef CONFIG_KASAN
